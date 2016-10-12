@@ -1,0 +1,6 @@
+name: Tel
+version: 1.0
+description: Convert formatted phone numbers into a valid href "tel" string.
+url: -
+developer: Aryeh Raber
+developer_url: http://aryehdesigns.com
