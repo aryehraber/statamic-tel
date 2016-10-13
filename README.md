@@ -4,7 +4,7 @@
 
 This modifier will convert a nicely formatted phone number into a numbers-only string, allowing usage inside an `href`.
 
-It will convert a `+` into `00` (for international numbers), and then remove all remaining spaces, dashes and brackets (including the bracket contents).
+It will convert any `+` symbols into `00` (for international numbers), remove `(0)` if it exists, and then remove all remaining non-numerical characters.
 
 
 ## Usage

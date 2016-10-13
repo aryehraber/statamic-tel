@@ -16,10 +16,12 @@ class TelModifier extends Modifier
      */
     public function index($value, $params, $context)
     {
+        // If any + is found, prepend number with 00
+        if (preg_match('/[+]/', $value)) {
+            $value = '00'.$value;
+        }
         // Remove anything inside brackets
-        $value = preg_replace('/\(.*?\)/', '', $value);
-        // Replace the + with 00
-        $value = preg_replace('/[+]/', '00', $value);
+        $value = preg_replace('/\(0\)/', '', $value);
         // Remove anything that's left that isn't a number
         $value = preg_replace('/[^0-9]/', '', $value);
 
